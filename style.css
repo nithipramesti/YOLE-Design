@@ -1,0 +1,258 @@
+:root{
+    box-sizing: border-box;
+    font-size: 0.85em;
+
+    /* VARIABLE */
+    --color-text: rgb(27, 27, 27);
+    --color-green-dark: rgb(68, 90, 59);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Montserrat';
+    color: var(--color-text);
+    line-height: 1.4;
+}
+
+.button{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-top: 40px;
+    padding: 15px 30px;
+}
+
+
+/* GRID STYLE 
+=======================================*/
+body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50px repeat(2, 700px) repeat(3, 400px) 700px;
+}
+
+.grid-4{
+    grid-column: 1 / 5;
+}
+
+.grid-2{
+    grid-column: span 2;
+}
+
+.grid-1{
+    grid-column: span 1;
+}
+
+
+/* CONTENT
+=======================================*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+nav li{
+    margin-right: 40px;
+}
+
+nav li a{
+    display: block;
+    color: inherit;
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+}
+
+
+/* HERO (POSITIONING & BG IMAGE)
+=======================================*/
+.grid{
+    position: relative;
+}
+
+.grid--text > div{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-1{
+    background-color: rgb(251, 249, 240);
+}
+
+.hero-2{
+    background-image: url(img/disp1.webp);
+    background-size: cover;
+    background-position: right 0 bottom -50px;
+}
+
+.hero-3{
+    background-image: url(img/disp2.webp);
+    background-size: cover;
+    background-position: right 0 top 0px;
+}
+
+.hero-4{
+    background-image: url(img/disp3.webp);
+    background-size: cover;
+    background-position: right 0 top 0px;
+}
+
+/* HERO (CONTENT)
+=======================================*/
+.hero-1 div{
+    top: 45%;
+}
+
+.hero-1 h1{
+    margin-top: 55px;
+    margin-bottom: 30px;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--color-green-dark);
+}
+
+.hero-1 a{
+    color: #ffffff;
+    background-color: var(--color-green-dark);
+}
+
+.hero-3{
+    text-align: center;
+}
+
+.hero-3 p{
+    font-weight: 500;
+}
+
+.hero-3 h2{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+.hero-3 a{
+    background-color: var(--color-text);
+    color: white;
+}
+
+.hero-4{
+    text-align: center;
+    color: white;
+}
+
+.hero-4 p{
+    font-weight: 500;
+}
+
+.hero-4 h2{
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 30px;
+}
+
+.hero-4 a{
+    background-color: white;
+    color: var(--color-text);
+}
+
+
+/* NEWSLETTER
+=======================================*/
+.newsletter {
+    text-align: center;
+}
+
+.newsletter p{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.email{
+    width: 600px;
+    height: 50px;
+    background-color: rgb(235, 235, 235);
+    border: 0;
+    border-radius: 0;
+    padding-left: 20px;
+    font-family: inherit;
+}
+
+
+/* INSTAGRAM
+=======================================*/
+.ig-0{
+    background-color: rgb(243, 243, 243);
+    text-align: center;
+}
+
+.ig-0 h3{
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.ig-0 a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.ig-1{
+    background-image: url(img/ig-1.jpg);
+    background-size: cover;
+}
+
+.ig-2{
+    background-image: url(img/ig-2.jpg);
+    background-size: cover;
+}
+
+.ig-3{
+    background-image: url(img/ig-3.jpg);
+    background-size: cover;
+}
+
+.ig-4{
+    background-image: url(img/ig-4.jpg);
+    background-size: cover;
+}
+
+.ig-5{
+    background-image: url(img/ig-5.jpg);
+    background-size: cover;
+}
+
+.ig-6{
+    background-image: url(img/ig-6.jpg);
+    background-size: cover;
+}
+
+.ig-7{
+    background-image: url(img/ig-7.jpg);
+    background-size: cover;
+}
