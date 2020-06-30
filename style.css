@@ -36,8 +36,9 @@ body{
 /* GRID STYLE 
 =======================================*/
 body{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(255px, 1fr));
     grid-template-rows: 50px repeat(2, 700px) repeat(3, 400px) 700px;
 }
 
@@ -187,20 +188,49 @@ nav li a{
 .newsletter {
     text-align: center;
 }
+ .newsletter > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+
+.newsletter h2{
+    font-size: 2rem;
+}
 
 .newsletter p{
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
+.input{
+    display: flex;
+    align-items: center;
+}
+
 .email{
-    width: 600px;
+    display: block;
+    width: 650px;
     height: 50px;
     background-color: rgb(235, 235, 235);
     border: 0;
     border-radius: 0;
     padding-left: 20px;
     font-family: inherit;
+}
+
+.submit{
+    display: block;
+    font-family: inherit;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 15px 30px;
+    color: white;
+    background-color: var(--color-text);
+    border: none;
+    height: 50px;
 }
 
 
@@ -255,4 +285,53 @@ nav li a{
 .ig-7{
     background-image: url(img/ig-7.jpg);
     background-size: cover;
+}
+
+
+/* FOOTER
+=======================================*/
+.footer{
+    background-color: #B67A59;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer > div{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 150px;
+}
+
+.footer h4{
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.footer p + h4, .footer div + h4{
+    margin-top: 100px;
+}
+
+.footer .email{
+    width: 300px;
+}
+
+.footer-flex{
+    display: flex;
+}
+
+
+.footer ul{
+    list-style-type: none;
+    width: 200px;
+}
+
+.footer li + li{
+    margin-top: 10px;
+}
+
+.footer a{
+    color: inherit;
+    text-decoration: none;
 }
