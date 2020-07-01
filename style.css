@@ -60,7 +60,7 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 50px repeat(2, 700px) repeat(3, 400px) 700px;
+    grid-template-rows: 50px repeat(2, 700px) repeat(3, 400px) 800px;
 }
 
 .grid-4{
@@ -126,8 +126,8 @@ nav ul{
     list-style-type: none;
 }
 
-nav li{
-    margin-right: 40px;
+nav li + li{
+    margin-left: 40px;
 }
 
 nav li a{
@@ -421,8 +421,16 @@ h2{
     font-size: 0.9rem;
 }
 
+.footer-1{
+    order: 1;
+}
+
+.footer-2{
+    order: 2;
+}
+
 .footer > div{
-    width: 70%;
+    width: 60%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -439,14 +447,42 @@ h2{
     margin-top: 100px;
 }
 
+.footer .input{
+    margin-bottom: 20px;
+}
+
 .footer .email{
     width: 100%;
+    background-color: #A36848;
+}
+
+.footer .email::placeholder{
+    color: #D5B3A0;
+}
+
+.footer .submit{
+    background-color: #D5B3A0;
+}
+
+.social-media a{
+    margin-right: 20px;
+}
+
+.social-media img{
+    width: 25px;
+}
+
+.question{
+    margin-top: 30px;
+}
+
+.copyright{
+    margin-top: 200px;
 }
 
 .footer-flex{
     display: flex;
 }
-
 
 .footer ul{
     list-style-type: none;
@@ -467,11 +503,25 @@ h2{
         font-size: 0.8rem;
     }
 
+    .footer-1{
+        order: 2;
+        padding-top: 50px;
+    }
+    
+    .footer-2{
+        order: 1;
+    }
+
     .footer > div{
         margin-top: 100px;
+        width: 80%;
     }
 
     .footer p + h4, .footer div + h4{
-        margin-top: 70px;
+        margin-top: 50px;
+    }
+
+    .copyright{
+        margin-top: 100px;
     }
 }
