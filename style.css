@@ -74,6 +74,11 @@ body{
 .grid-1{
     grid-column: span 1;
 }
+@media (min-width: 1700px){
+    body{
+        grid-template-rows: 70px repeat(2, 850px) repeat(3, 450px) 800px;
+    }
+}
 
 @media (max-width: 900px){
     body{
@@ -117,6 +122,10 @@ header{
     padding: 0 40px;
 }
 
+.logo img{
+    padding-top: 5px;
+}
+
 nav{
     display: flex;
 }
@@ -138,12 +147,73 @@ nav li a{
     letter-spacing: 0.03em;
 }
 
-@media (max-width: 500px){
-    nav{
+.main-menu{
+    margin-right: 40px;
+}
+
+.menu-toggle{
+    display: none;
+    width: 25px;
+    cursor: pointer;
+    z-index: 300;
+}
+
+@media (max-width: 900px){
+    nav .main-menu{
         display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        padding: 200px 0 0 0;
+        margin-right: 0;
+        background-color: #ffffff;
+        text-align: center;
+        z-index: 200;
+    }
+
+    nav li + li{
+        margin: 0;
+    }
+
+    nav .main-menu li{
+        margin-bottom: 40px;
+    }
+
+    nav .main-menu li a{
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .menu-icons{
+        margin-right: 10px;
+    }
+
+    .menu-icons li{
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .menu-icons img{
+        margin-bottom: -3px;
+    }
+
+    nav.is-open .main-menu{
+        display: block;
     }
 }
 
+
+@media (max-width: 500px){
+    nav .main-menu{
+        padding-top: 150px;
+    }
+}
 
 /* HERO (POSITIONING & BG IMAGE)
 =======================================*/
