@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/u4536737/public_html/YOLE-design
+    - export DEPLOYPATH=/home/u4536737/public_html/YOLE-Design
     - /bin/cp -R * $DEPLOYPATH
      
  
