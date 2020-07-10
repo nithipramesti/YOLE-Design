@@ -151,7 +151,7 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 550px 550px 550px 400px 200px 200px 400px 600px;
+    grid-template-rows: 50px 550px 550px 550px 400px 50vw 50vw 400px 600px;
 
     .grid-4{
         grid-column: 1 / 5;
@@ -170,7 +170,7 @@ body{
     }
 
     @media #{$min-width-M} {
-        grid-template-rows: 60px 700px 700px 700px 400px 200px 200px 400px 600px;
+        grid-template-rows: 60px 700px 700px 700px 400px 50vw 50vw 400px 600px;
 
         .grid-1{
             grid-column: span 1;
@@ -178,7 +178,7 @@ body{
     }
 
     @media #{$min-width-L} {
-        grid-template-rows: 3vw 50vw 50vw 30vw 25vw 25vw 60vw;
+        grid-template-rows: 4vw 50vw 50vw 30vw 25vw 25vw 60vw;
 
         .grid-2{
             grid-column: span 2;
@@ -263,6 +263,7 @@ header{
             }
             
             li a{
+                color: $color-base;
                 font-size: 1rem;
                 text-transform: uppercase;
                 display: block;
@@ -279,7 +280,7 @@ header{
             .social-media{
                 width: 100%;
                 position: absolute;
-                bottom: 3em;
+                bottom: 5em;
 
                 @media #{$min-width-L} {
                     display: none;
@@ -294,7 +295,7 @@ header{
                 }
 
                 @media #{$min-width-M} {
-                    bottom: 5em;
+                    bottom: 7em;
 
                     a+a{
                         margin-left: 1.5em;
@@ -325,23 +326,18 @@ header{
     }
     
     .menu-icons{
-        margin-right: 0.9em;
+        margin-right: 1em;
 
         @media #{$min-width-L} {
             margin-right: 0;
         }
 
         li + li{
-            margin-left: 1.5em;
-        }
-    }
-    
-    .menu-icons li{
-        margin-left: 0;
-        margin-right: 1em;
+            margin-left: 1em;
 
-        @media #{$min-width-L} {
-            margin-right: 0;
+            @media #{$min-width-L} {
+                margin-left: 1.5em;
+            }
         }
     }
     

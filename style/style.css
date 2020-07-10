@@ -172,8 +172,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 50px 550px 550px 550px 400px 200px 200px 400px 600px;
-      grid-template-rows: 50px 550px 550px 550px 400px 200px 200px 400px 600px;
+  -ms-grid-rows: 50px 550px 550px 550px 400px 50vw 50vw 400px 600px;
+      grid-template-rows: 50px 550px 550px 550px 400px 50vw 50vw 400px 600px;
 }
 
 body .grid-4 {
@@ -198,8 +198,8 @@ body .hero-2 {
 
 @media (min-width: 700px) {
   body {
-    -ms-grid-rows: 60px 700px 700px 700px 400px 200px 200px 400px 600px;
-        grid-template-rows: 60px 700px 700px 700px 400px 200px 200px 400px 600px;
+    -ms-grid-rows: 60px 700px 700px 700px 400px 50vw 50vw 400px 600px;
+        grid-template-rows: 60px 700px 700px 700px 400px 50vw 50vw 400px 600px;
   }
   body .grid-1 {
     grid-column: span 1;
@@ -208,8 +208,8 @@ body .hero-2 {
 
 @media (min-width: 1020px) {
   body {
-    -ms-grid-rows: 3vw 50vw 50vw 30vw 25vw 25vw 60vw;
-        grid-template-rows: 3vw 50vw 50vw 30vw 25vw 25vw 60vw;
+    -ms-grid-rows: 4vw 50vw 50vw 30vw 25vw 25vw 60vw;
+        grid-template-rows: 4vw 50vw 50vw 30vw 25vw 25vw 60vw;
   }
   body .grid-2 {
     grid-column: span 2;
@@ -316,6 +316,7 @@ header nav .main-menu li {
 }
 
 header nav .main-menu li a {
+  color: #1b1b1b;
   font-size: 1rem;
   text-transform: uppercase;
   display: block;
@@ -334,7 +335,7 @@ header nav .main-menu li a {
 header nav .main-menu .social-media {
   width: 100%;
   position: absolute;
-  bottom: 3em;
+  bottom: 5em;
 }
 
 @media (min-width: 1020px) {
@@ -353,7 +354,7 @@ header nav .main-menu .social-media img {
 
 @media (min-width: 700px) {
   header nav .main-menu .social-media {
-    bottom: 5em;
+    bottom: 7em;
   }
   header nav .main-menu .social-media a + a {
     margin-left: 1.5em;
@@ -382,7 +383,7 @@ header nav.is-open .menu-toggle {
 }
 
 header .menu-icons {
-  margin-right: 0.9em;
+  margin-right: 1em;
 }
 
 @media (min-width: 1020px) {
@@ -392,17 +393,12 @@ header .menu-icons {
 }
 
 header .menu-icons li + li {
-  margin-left: 1.5em;
-}
-
-header .menu-icons li {
-  margin-left: 0;
-  margin-right: 1em;
+  margin-left: 1em;
 }
 
 @media (min-width: 1020px) {
-  header .menu-icons li {
-    margin-right: 0;
+  header .menu-icons li + li {
+    margin-left: 1.5em;
   }
 }
 
